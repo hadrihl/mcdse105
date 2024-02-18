@@ -9,7 +9,7 @@
 <title>Homepage</title>
 </head>
 <body>
-	<h2>Welcome to Malaysian Software Developers Portal!</h2>
+	<h2>Welcome to KA Inventory Management System!</h2>
 	<footer>&copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>

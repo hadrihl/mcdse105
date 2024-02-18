@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
     pageEncoding="US-ASCII"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 	<h2>Register</h2>
-	<form action="/register" method="post">
+	<form action="/register" modelatrribute="user" method="post">
 		<label for="username">Username</label><br>
 		<input type="text" id="username" name="username" required /><br>
 		
@@ -22,6 +23,10 @@
 		<input type="password" id="cpassword" name="cpassword" required /><br>
 		
 		<button type="submit">Register</button>
+		
+		<c:if test="${not empty errmsg}">
+			<p style="color: red;">${errmsg} Please try again.</p>
+		</c:if>
 	</form>
 	
 	<footer>&copy; 2024. Made with love in Penang.</footer>
