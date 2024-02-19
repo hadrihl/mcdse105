@@ -10,6 +10,15 @@
 </head>
 <body>
 	<h2>Welcome to KA Inventory Management System!</h2>
-	<footer>&copy; 2024. Made with love in Penang.</footer>
+	
+	<div class="container">
+		<ul>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/products">Products</a></li>
+		</ul>
+	</div>
+	
+	<footer><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>

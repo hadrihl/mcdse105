@@ -49,6 +49,6 @@
 		<p><a href="/products/new" style="color: red:"><button>Create New Product</button></a></p>
 	</div>
 	
-	<footer style="margin-top: 30px;">&copy; 2024. Made with love in Penang.</footer>
+	<footer style="margin-top: 30px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>
