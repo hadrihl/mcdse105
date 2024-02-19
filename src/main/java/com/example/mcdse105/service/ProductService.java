@@ -1,13 +1,9 @@
 package com.example.mcdse105.service;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.mcdse105.entity.Product;
 import com.example.mcdse105.repository.ProductRepository;
 
@@ -52,5 +48,13 @@ public class ProductService {
 	
 	public void removeProductById(Long id) {
 		productRepository.deleteById(id);
+	}
+	
+	public boolean productExists(String name) {
+		if(productRepository.findProductByName(name) == null) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

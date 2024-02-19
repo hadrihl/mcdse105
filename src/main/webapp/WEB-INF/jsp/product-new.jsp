@@ -43,9 +43,13 @@
 			<button type="submit">Create</button>
 		</div>
 		
+		<c:if test="${not empty errmsg}">
+		<p style="color: red;">${errmsg}</p>
+		</c:if>
+		
 	</form>
 	</div>
 	
-	<footer>&copy; 2024. Made with love in Penang.</footer>
+	<footer style="margin-top: 30px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>

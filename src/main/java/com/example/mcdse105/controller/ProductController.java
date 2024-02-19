@@ -33,8 +33,17 @@ public class ProductController {
 	
 	@PostMapping("/products/new")
 	public String AddNewProduct(Model model, @ModelAttribute("product") Product product) {
-		productService.addNewProduct(product);
-		return "redirect:/products";
+		System.err.println(productService.productExists(product.getName()));
+		
+		// if product already exists
+		if(productService.productExists(product.getName()) == true) {
+			model.addAttribute("errmsg", "Product " + product.getName() + " is already exists! Please add a new product.");
+			return "product-new";
+		
+		} else { // product is new
+			productService.addNewProduct(product);
+			return "redirect:/products";
+		}
 	}
 	
 	@GetMapping("/products/{id}")
