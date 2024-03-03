@@ -10,8 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Welcome, <c:if test="${ not empty username }">${username}</c:if>!</h1>
-		
+		<h1>Welcome, <c:if test="${ not empty username }">${username}</c:if>!</h1>	
 		<form:form action="${pageContext.request.contextPath}/logout" method="POST">
 			<button type="submit">Logout</button>
 		</form:form>

@@ -39,7 +39,6 @@ public class SecurityConfig {
 	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		
 		http
-			.csrf().disable()
 			.authorizeHttpRequests()
 				.antMatchers(HttpMethod.GET, "/").permitAll()
 				.antMatchers(HttpMethod.GET, "/assets/**").permitAll()
@@ -64,6 +63,13 @@ public class SecurityConfig {
 				.permitAll();
 				
 		
+		return http.build();
+	}
+	
+	@Bean
+	public SecurityFilterChain configuration(HttpSecurity http) throws Exception {
+		http
+			.csrf().disable();
 		return http.build();
 	}
 }
