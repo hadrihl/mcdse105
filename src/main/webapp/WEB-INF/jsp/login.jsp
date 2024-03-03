@@ -16,13 +16,13 @@
 		<label for="password">Password</label>
 		<input type="password" id="password" name="password" required /><br><br>
 		
-		<button type="submit">Login</button>
+		<button type="submit" style="margin-bottom: 10px;">Login</button>
 		
 		<c:if test="${not empty errmsg}">
 			<p style="color: red;">${errmsg} Please try again.</p>
 		</c:if>
 	</form>
 	
-	<footer>&copy; 2024. Made with love in Penang.</footer>
+	<footer style="margin-top: 20px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>

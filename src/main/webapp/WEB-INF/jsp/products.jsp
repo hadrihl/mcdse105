@@ -9,9 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Welcome, 
-		<c:if test="${ not empty username }">${username}</c:if>
-		!</h1>
+		<h1>Welcome, <c:if test="${ not empty username }">${username}</c:if>!</h1>
 		
 		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 		<form:form action="${pageContext.request.contextPath}/logout" method="POST">

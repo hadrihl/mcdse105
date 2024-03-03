@@ -22,13 +22,13 @@
 		<label for="cpassword">Confirm password</label><br>
 		<input type="password" id="cpassword" name="cpassword" required /><br>
 		
-		<button type="submit">Register</button>
+		<button type="submit" style="margin-top: 20px;">Register</button>
 		
 		<c:if test="${not empty errmsg}">
 			<p style="color: red;">${errmsg} Please try again.</p>
 		</c:if>
 	</form>
 	
-	<footer>&copy; 2024. Made with love in Penang.</footer>
+	<footer style="margin-top: 20px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>

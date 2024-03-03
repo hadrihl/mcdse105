@@ -21,6 +21,6 @@
 		</ul>
 	</div>
 	
-	<footer><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
+	<footer style="margin-top: 20px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
 </body>
 </html>
