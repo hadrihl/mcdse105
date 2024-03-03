@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
     pageEncoding="US-ASCII"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,6 @@
 	<div class="container">
 		<h1>Welcome, <c:if test="${ not empty username }">${username}</c:if>!</h1>
 		
-		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 		<form:form action="${pageContext.request.contextPath}/logout" method="POST">
 			<button type="submit">Logout</button>
 		</form:form>
