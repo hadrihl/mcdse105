@@ -9,6 +9,17 @@
 </head>
 <body>
 	<div class="container">
+		<h1>Welcome, 
+		<c:if test="${ not empty username }">${username}</c:if>
+		!</h1>
+		
+		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+		<form:form action="${pageContext.request.contextPath}/logout" method="POST">
+			<button type="submit">Logout</button>
+		</form:form>
+	</div>
+
+	<div class="container">
 		<h1>KA Products</h1>
 		
 		<c:if test="${empty products}">
