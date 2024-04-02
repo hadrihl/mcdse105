@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
     pageEncoding="US-ASCII"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@
 	<div class="container">
 	<h1>Product: ${product.name}</h1>
 	
-	<form method="post" action="/products/${product.id}/update" modelattribute="product">
+	<form:form method="post" action="/products/${product.id}/update" modelattribute="product">
 	
 		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
 			<label for="name">Name</label>
@@ -45,7 +47,7 @@
 		<c:if test="${not empty msg}">
 		<p style="color: green;">${msg}</p>
 		</c:if>
-	</form>
+	</form:form>
 	</div>
 	
 	<footer style="margin-top: 30px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
